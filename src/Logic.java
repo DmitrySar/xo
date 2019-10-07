@@ -27,5 +27,9 @@ public class Logic {
 		}
 		fieldout.toScreen();
 	}
+
+	public int getNumberOfSteps() {
+		return numOfStep;
+	}
 	
 }
