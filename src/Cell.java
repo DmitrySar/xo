@@ -1,24 +1,33 @@
-
-import java.time.temporal.*;
-
 public class Cell
 {
-	public static enum change {X, O, _}
-	private change value;
+	public static enum Xo {
+		X("X"), O("O"), N(".");
+
+		private String tittle;
+
+		Xo(String tittle) {
+			this.tittle = tittle;
+		}
+
+		public String getTitle() {
+			return this.tittle;
+		}
+
+	}
+	private Xo value;
 	
 	public Cell() {
-		value = change._;
-	}
+		value = Xo.N;	}
 	
 	void setX() {
-		value = change.X;
+		value = Xo.X;
 	}
 	
 	void setO() {
-		value = change.O;
+		value = Xo.O;
 	}
 	
-	change getValue() {
+	Xo getValue() {
 		return value;
 	}
 }
