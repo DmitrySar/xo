@@ -16,7 +16,7 @@ public class Control {
 		System.out.println("2 . . .");
 		System.out.println("3 . . .");
 
-		while (logic.getNumberOfSteps() < 9){
+		while (logic.getNumberOfSteps() < 9 || !logic.isWin()){
             System.out.printf("Step of %d. Input coordinates: ", logic.getNumberOfSteps()+1);
 			logic.sendLine(in.nextLine());
 			logic.start();
