@@ -17,4 +17,8 @@ public class Field {
 	public Cell getCell(int x, int y) {
 		return cell[x][y];
 	}
+
+	public boolean isBusy(int x, int y) {
+		return  !getCell(x, y).getValue().equals(Cell.Xo.N);
+	}
 }

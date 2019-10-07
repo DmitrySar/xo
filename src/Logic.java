@@ -13,11 +13,12 @@ public class Logic {
 	
 	public void start() {
 		StringToIntArrays coordinats = new StringToIntArrays(this.readline);
-		if (numOfStep++ % 2 == 0) {
+		if (!field.isBusy(coordinats.getCoordinats()[0], coordinats.getCoordinats()[1]))
+			if (numOfStep++ % 2 == 0) {
 			field.setX(coordinats.getCoordinats()[0], coordinats.getCoordinats()[1]);
-		} else {
+			} else {
 				field.setO(coordinats.getCoordinats()[0], coordinats.getCoordinats()[1]);
-		}
+			}
 		fieldout.toScreen();
 	}
 	
