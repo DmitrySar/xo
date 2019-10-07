@@ -20,6 +20,7 @@ import java.util.*;public class FieldOut
 	}
 
 	public void showMessage(String message) {
+		System.out.println("……………………");
 		System.out.println(message);
 	}
 }
