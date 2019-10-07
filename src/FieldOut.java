@@ -2,7 +2,7 @@
 import java.util.*;public class FieldOut
  {
 	
-	Field field;
+	private Field field;
 	
 	public FieldOut(Field field) {
 		this.field = field;
@@ -17,5 +17,9 @@ import java.util.*;public class FieldOut
 			}
             System.out.println();
 		}
+	}
+
+	public void showMessage(String message) {
+		System.out.println(message);
 	}
 }

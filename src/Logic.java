@@ -26,6 +26,10 @@ public class Logic {
 			}
 		}
 		fieldout.toScreen();
+		Cell.Xo findWinner = new Win(field).getWinner();
+		if (!(findWinner.equals(Cell.Xo.N))) {
+			fieldout.showMessage("Winner: " + findWinner.getTitle());
+		}
 	}
 
 	public int getNumberOfSteps() {
