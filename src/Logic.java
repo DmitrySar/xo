@@ -12,13 +12,19 @@ public class Logic {
 	}
 	
 	public void start() {
-		StringToIntArrays coordinats = new StringToIntArrays(this.readline);
-		if (!field.isBusy(coordinats.getCoordinats()[0], coordinats.getCoordinats()[1]))
+		StringToIntArrays coordinates = new StringToIntArrays(this.readline);
+		int x = coordinates.getCoordinats()[0];
+		int y = coordinates.getCoordinats()[1];
+		int[] trueCoordinates = {0, 1, 2};
+		if (!(Arrays.binarySearch(trueCoordinates, x) < 0)
+				&& !(Arrays.binarySearch(trueCoordinates, y) < 0)
+				&& !field.isBusy(x, y)) {
 			if (numOfStep++ % 2 == 0) {
-			field.setX(coordinats.getCoordinats()[0], coordinats.getCoordinats()[1]);
+				field.setX(x, y);
 			} else {
-				field.setO(coordinats.getCoordinats()[0], coordinats.getCoordinats()[1]);
+				field.setO(x, y);
 			}
+		}
 		fieldout.toScreen();
 	}
 	

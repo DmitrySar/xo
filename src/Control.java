@@ -11,8 +11,12 @@ public class Control {
 	}
 	
 	public void start() {
-		for (int i = 0; i < 9; i++) {
-			System.out.println("Input coordinates: a1, b2 …");
+        System.out.println("  a b c");
+        System.out.println("1 . . .");
+        System.out.println("2 . . .");
+        System.out.println("3 . . .");
+        for (int i = 0; i < 9; i++) {
+            System.out.print("Input coordinates: ");
 			logic.sendLine(in.nextLine());
 			logic.start();
 		}
