@@ -6,8 +6,8 @@ public class StringToIntArrays {
 		this.input = input.toLowerCase();
 	}
 	
-	public int[] getCoordinats() {
-		int[] coordinats = {input.charAt(0) - 2 * DELTA + 1, input.charAt(1) - DELTA};
-		return coordinats;
+	public int[] getCoordinates() {
+		int[] coordinates = {input.charAt(0) - 2 * DELTA + 1, input.charAt(1) - DELTA};
+		return coordinates;
 	}
 }

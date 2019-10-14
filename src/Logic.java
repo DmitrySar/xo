@@ -15,8 +15,8 @@ public class Logic {
 	
 	public void start() {
 		StringToIntArrays coordinates = new StringToIntArrays(this.readline);
-		int x = coordinates.getCoordinats()[0];
-		int y = coordinates.getCoordinats()[1];
+		int x = coordinates.getCoordinates()[0];
+		int y = coordinates.getCoordinates()[1];
 		int[] trueCoordinates = {0, 1, 2};
 		if (!(Arrays.binarySearch(trueCoordinates, x) < 0)
 				&& !(Arrays.binarySearch(trueCoordinates, y) < 0)
