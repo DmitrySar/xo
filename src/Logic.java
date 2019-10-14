@@ -7,6 +7,7 @@ public class Logic {
 	private FieldOut fieldout = new FieldOut(field);
 	private int numOfStep = 0;
 	private Cell.Xo Winner = Cell.Xo.N;
+	private  Data data = new Data();
 	
 	public void sendLine(String readline) {
 		this.readline = readline;
@@ -26,6 +27,7 @@ public class Logic {
 				field.setO(x, y);
 			}
 		}
+		data.addStep(field);
 		fieldout.toScreen();
 		Cell.Xo findWinner = new Win(field).getWinner();
 		Winner = findWinner;
