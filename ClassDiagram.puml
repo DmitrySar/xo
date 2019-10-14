@@ -1,0 +1,46 @@
+@startuml
+class Cell {
++setX()
++setO()
++getValue()
+}
+class Control {
++main()
++start()
+}
+class Field {
++setX(int, int)
++setO(int, int)
++getCell(int, int): Cell
++isBusy(int, int): boolean
+}
+class FieldOut {
++toScreen()
++showMessage(String)
+}
+class Logic {
++sendLine(String)
++start()
++getNumberOfSteps(): int
++isWin(): boolean
+}
+class StringToIntArrays {
++StringToIntArrays(String)
++getCoordinats(): int[]
+}
+class Win {
++getWinner(): Cell.Xo
+}
+
+Control -> Control
+Control —> Logic
+FieldOut <--o Logic
+
+Field *— Cell
+Win *-up-> Field
+FieldOut *-right-> Field
+Logic —> StringToIntArrays
+Logic —> Win
+Logic o-> Field
+
+@enduml
