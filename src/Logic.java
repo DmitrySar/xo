@@ -19,6 +19,9 @@ public class Logic {
 			field = data.getStep(data.size()-2);
 			fieldout = new FieldOut(field);
 			numOfStep -= 1;
+			if (numOfStep < 1) {
+				numOfStep = 1;
+			}
 		}
 		StringToIntArrays coordinates = new StringToIntArrays(this.readline);
 		int x = coordinates.getCoordinates()[0];
