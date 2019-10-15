@@ -14,6 +14,12 @@ public class Logic {
 	}
 	
 	public void start() throws CloneNotSupportedException {
+		if (readline.equals("u")) {
+			readline = "uu";
+			field = data.getStep(data.size()-2);
+			fieldout = new FieldOut(field);
+			numOfStep -= 1;
+		}
 		StringToIntArrays coordinates = new StringToIntArrays(this.readline);
 		int x = coordinates.getCoordinates()[0];
 		int y = coordinates.getCoordinates()[1];
@@ -33,11 +39,6 @@ public class Logic {
 		Winner = findWinner;
 		if (!(findWinner.equals(Cell.Xo.N))) {
 			fieldout.showMessage("Winner: " + findWinner.getTitle());
-		}
-
-		for (int i = 0; i < data.size(); i++) {
-			System.out.println("***************");
-			new FieldOut(data.getStep(i)).toScreen();
 		}
 
 	}
