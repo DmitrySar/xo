@@ -1,11 +1,17 @@
-public class Field {
+public class Field implements Cloneable {
+
 	public final static int SIZE = 3;
 	private Cell[][] cell = {
 		{new Cell(), new Cell(), new Cell()},
 	    {new Cell(), new Cell(), new Cell()},
 	    {new Cell(), new Cell(), new Cell()}
 	};
-	
+
+	@Override
+	public Field clone() throws CloneNotSupportedException {
+		return (Field) super.clone();
+	}
+
 	public void setX(int x, int y) {
 		cell[x][y].setX();
 	}

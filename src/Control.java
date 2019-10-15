@@ -5,12 +5,12 @@ public class Control {
 	private Logic logic = new Logic();
 	private Scanner in = new Scanner(System.in);
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		Control control = new Control();
 		control.start();
 	}
 	
-	public void start() {
+	public void start() throws CloneNotSupportedException {
 		System.out.println("  a b c");
 		System.out.println("1 . . .");
 		System.out.println("2 . . .");
