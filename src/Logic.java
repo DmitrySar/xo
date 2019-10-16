@@ -17,7 +17,7 @@ public class Logic {
 		if (readline.equals("u")) {
 			readline = "uu";
 			numOfStep -= 1;
-			if (numOfStep < 1) {
+			if (numOfStep < 0) {
 				numOfStep = 1;
 			}
 			field = data.getStep(numOfStep);
