@@ -13,15 +13,15 @@ public class Logic {
 		this.readline = readline;
 	}
 	
-	public void start() throws CloneNotSupportedException {
+	public void start() {
 		if (readline.equals("u")) {
 			readline = "uu";
-			field = data.getStep(data.size()-2);
-			fieldout = new FieldOut(field);
 			numOfStep -= 1;
 			if (numOfStep < 1) {
 				numOfStep = 1;
 			}
+			field = data.getStep(numOfStep);
+			fieldout = new FieldOut(field);
 		}
 		StringToIntArrays coordinates = new StringToIntArrays(this.readline);
 		int x = coordinates.getCoordinates()[0];
@@ -36,7 +36,7 @@ public class Logic {
 				field.setO(x, y);
 			}
 		}
-		data.addStep(field);
+		data.addStep(field, numOfStep);
 		fieldout.toScreen();
 		Cell.Xo findWinner = new Win(field).getWinner();
 		Winner = findWinner;
